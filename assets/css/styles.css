@@ -280,12 +280,9 @@ img{
     border-radius: .25rem;
 }
 
-.skills__name:hover{
-    background-color: var(--first-color);
-    color: var(--white-color);
-}
 
-.skills__img img{
+
+.dogimg img{
     border-radius: .5rem;
 }
 
@@ -299,12 +296,12 @@ img{
     row-gap: 2rem;
 }
 
-.portfolio__img{
+.bookimg{
     position: relative;
     overflow: hidden;
 }
 
-.portfolio__img img{
+.bookimg img{
     border-radius: .5rem;
 }
 
@@ -323,7 +320,7 @@ img{
     transition: .3s;
 }
 
-.portfolio__img:hover .portfolio__link{
+.bookimg:hover .portfolio__link{
     bottom: 0;
 }
 
@@ -375,7 +372,7 @@ img{
 
 
 .footer{
-    background-color: var(--dark-color);
+    background-color: black;
 }
 
 .footer__container{
@@ -392,14 +389,7 @@ img{
     padding: .25rem 0;
 }
 
-.footer__link:hover{
-    color: var(--first-color);
-}
 
-.footer__social{
-    font-size: 1.4rem;
-    margin-right: var(--mb-1);
-}
 
 
 
