@@ -18,7 +18,7 @@
 
 <body>
     <div class="signup-form">
-        <form action="" method="post">
+        <form action="" method="post" class="form-inline" onsubmit="openModal()" id="myForm">
             <h2>Create an Account</h2>
             <p class="hint-text">Sign up with your social media account or email address</p>
             <div class="social-btn text-center">
@@ -73,6 +73,34 @@
             document.getElementById("field_terms").setCustomValidity("Please indicate that you accept the Terms and Conditions");
         </script>
     </div>
-</body>
+
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="icon-box">
+					<i class="material-icons">&#xE876;</i>
+				</div>				
+				<h4 class="modal-title">Awesome!</h4>	
+			</div>
+			<div class="modal-body">
+				<p class="text-center-modal">Your account has been successfully created. Please check your email to validate your account.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>     
+
+<script>
+    $('#myForm').on('submit', function(e){
+  $('#myModal').modal('show');
+  e.preventDefault();
+});
+</script>
+
+</body>  
 
 </html>

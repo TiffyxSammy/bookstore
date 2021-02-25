@@ -1,6 +1,6 @@
 body {
     color: #434343;
-    background: #dfe7e9;
+    background: #000000;
     font-family: 'Varela Round', sans-serif;
 }
 .form-control {
@@ -36,7 +36,7 @@ body {
     margin: 10px 0 15px;
 }
 .signin-form .hint-text {
-    color: #999;
+    color: black;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -111,4 +111,7 @@ body {
 }
 .social-btn .btn i {
     font-size: 20px;
+}
+.text-center {
+    color: white;
 }
