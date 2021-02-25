@@ -18,7 +18,7 @@
 
 <body>
     <div class="signup-form">
-        <form action="" method="post">
+        <form action="" method="post" class="form-inline" onsubmit="openModal()" id="myForm">
             <h2>Create an Account</h2>
             <p class="hint-text">Sign up with your social media account or email address</p>
             <div class="social-btn text-center">
@@ -65,16 +65,49 @@
                 <input type="checkbox" required name="terms"
                     onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"
                     id="field_terms">  
-                <label for="terms">I agree with the <a href="terms.php"
-                        title="You may read our terms and conditions by clicking on this link">terms and
-                        conditions</a> for Registration.</label><span class="required">* </span>
+                <label for="terms">I agree with the <a href="#">terms and conditions</a> for Registration.</label>
             </div>
         </form>
-        <div class="text-center">Already have an account? <a href="#">Login here</a></div>
+        <div class="text-center">Already have an account? <a href="userLogin.html">Login here</a></div>
         <script type="text/javascript">
             document.getElementById("field_terms").setCustomValidity("Please indicate that you accept the Terms and Conditions");
         </script>
     </div>
-</body>
+
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="icon-box">
+					<i class="material-icons">&#xE876;</i>
+				</div>				
+				<h4 class="modal-title">Awesome!</h4>	
+			</div>
+			<div class="modal-body">
+				<p class="text-center-modal">Your account has been successfully created. Please check your email to validate your account.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-success btn-block" data-dismiss="modal" data-target="userLogin.html">OK</button>
+			</div>
+		</div>
+	</div>
+</div>     
+
+<script>
+    $('#myForm').on('submit', function(e){
+  $('#myModal').modal('show');
+  e.preventDefault();
+
+});
+</script>
+
+<script>
+$('#myModal').on('hide.bs.modal', function (e) {  
+    window.location.href = 'userLogin.html'
+})
+</script>
+
+</body>  
 
 </html>
