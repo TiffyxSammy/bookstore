@@ -88,7 +88,7 @@
 				<p class="text-center-modal">Your account has been successfully created. Please check your email to validate your account.</p>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+				<button class="btn btn-success btn-block" data-dismiss="modal" data-target="userLogin.html">OK</button>
 			</div>
 		</div>
 	</div>
@@ -98,7 +98,14 @@
     $('#myForm').on('submit', function(e){
   $('#myModal').modal('show');
   e.preventDefault();
+
 });
+</script>
+
+<script>
+$('#myModal').on('hide.bs.modal', function (e) {  
+    window.location.href = 'userLogin.html'
+})
 </script>
 
 </body>  
