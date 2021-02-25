@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create an Account</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="registerUser.css">
+    <script src="register.js"></script>
+
+</head>
+
+<body>
+    <div class="signup-form">
+        <form action="" method="post">
+            <h2>Create an Account</h2>
+            <p class="hint-text">Sign up with your social media account or email address</p>
+            <div class="social-btn text-center">
+                <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+                <a href="#" class="btn btn-danger btn-lg"><i class="fa fa-google"></i> Google</a>
+            </div>
+            <div class="or-seperator"><b>or</b></div>
+
+            <div class="form-group">
+                <label for="firstname"><span class="required">* </span> First Name: </label>
+                <input class="form-control" type="text" name="firstname" id="txt" onkeyup="Validate(this)" required />
+                <div id="errFirst"></div>
+            </div>
+            <div class="form-group">
+                <label for="lastname"><span class="required">* </span> Last Name: </label>
+                <input class="form-control" type="text" name="lastname" id="txt" onkeyup="Validate(this)" required />
+                <div id="errLast"></div>
+            </div>
+            <div class="form-group">
+                <label for="phonenumber"><span class="required">* </span> Phone Number: </label>
+                <input required type="text" name="phonenumber" id="phone" class="form-control phone"
+                    maxlength="28"></input>
+            </div>
+            <div class="form-group">
+                <label for="email"><span class="required">* </span> Email Address: </label>
+                <input class="form-control" required type="text" name="email" id="email"
+                    onchange="email_validate(this.value);" />
+                <div class="status" id="status"></div>
+            </div>
+            <div class="form-group">
+                <label for="username"><span class="required">* </span> Username:</label>
+                <input class="form-control" type="text" name="username" id="txt" onkeyup="Validate(this)" required />
+                <div id="errLast"></div>
+            </div>
+            <div class="form-group">
+                <label for="password"><span class="required">* </span> Password: </label>
+                <input required name="password" type="password" class="form-control inputpass" minlength="4"
+                    id="pass1" /> </p>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success btn-lg btn-block signup-btn">Sign Up</button>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" required name="terms"
+                    onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"
+                    id="field_terms">  
+                <label for="terms">I agree with the <a href="terms.php"
+                        title="You may read our terms and conditions by clicking on this link">terms and
+                        conditions</a> for Registration.</label><span class="required">* </span>
+            </div>
+        </form>
+        <div class="text-center">Already have an account? <a href="#">Login here</a></div>
+        <script type="text/javascript">
+            document.getElementById("field_terms").setCustomValidity("Please indicate that you accept the Terms and Conditions");
+        </script>
+    </div>
+</body>
+
+</html>
