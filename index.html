@@ -1,324 +1,348 @@
-  <!DOCTYPE html>
-      <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-          <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-          <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dropdown Search Box</title>
+    <link rel="stylesheet" href="search.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".default_option").click(function(){
+          $(".dropdown ul").addClass("active");
+        });
 
-          <title>Rare Finds</title>
-      </head>
-      <body>
-          <header class="l-header">
-              <nav class="nav bd-grid">
-                  <div>
-                      <a href="index.html" class="nav__logo">Rare Finds</a>
-                  </div>
+        $(".dropdown ul li").click(function(){
+          var text = $(this).text();
+          $(".default_option").text(text);
+          $(".dropdown ul").removeClass("active");
+        });
+      });
+    </script>
 
-                  <div class="nav__menu" id="nav-menu">
-                      <ul class="nav__list">
-                        
-                          <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-                          <li class="nav__item"><a href="#" class="nav__link">Bestsellers</a></li>
-                          <li class="nav__item"><a href="#" class="nav__link">Nonfiction</a></li>
-                          <li class="nav__item"><a href="#" class="nav__link">Fiction</a></li>
-                          <li class="nav__item"><a href="userLogin.html" class="nav__link">Login</a></li>
-                      
-                  <li style= "background-color: black" class="nav__item">
-                    <form class="example" action="#" style="margin:auto;max-width:300px">
-                      <input type="text" placeholder="Search" name="search2">
-                    </form>
-                    </li>
-                </ul>
+    <title>Rare Finds</title>
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="index.html" class="nav__logo">Rare Finds</a>
             </div>
 
-                  <div class="nav__toggle" id="nav-toggle">
-                      <i class='bx bx-menu'></i>
+            <div class="wrapper">
+              <div class="search_box">
+                  <div class="dropdown">
+                      <div class="default_option">All</div>  
+                      <ul>
+                        <li>All</li>
+                        <li>Best sellers</li>
+                        <li>Featured</li>
+                        <li>Fiction</li>
+                      </ul>
                   </div>
-              </nav>
-          </header>
+                  <div class="search_field">
+                    <input type="text" class="input" placeholder="Search by book title">
+                    <i class="fas fa-search"></i>
+                </div>
+              </div>
+          </div>
 
-          <main class="l-main">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="checkout.html" class="nav__link">Checkout</a></li>
+                    <li class="nav__item"><a href="userLogin.html" class="nav__link">Login</a></li>
+            </div> 
 
-              <section class="home" id="home">
-                  <div class="home__container bd-grid">
-                      <h1 class="home__title"><span>RARE</span><br>FINDS</h1>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
 
-                      <div class="home__scroll">
-                          <a class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
-                      </div>
+    <main class="l-main">
 
-                      <img src="assets/img/homebooks.png" alt="" class="home__img">
-                  </div>
-              </section>
+        <section class="home" id="home">
+            <div class="home__container bd-grid">
+                <h1 class="home__title"><span>RARE</span><br>FINDS</h1>
 
-              <section class="skills section" id="skills">
-                  <h2 class="section-title">About</h2>
+                <div class="home__scroll">
+                    <a class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
+                </div>
 
-                  <div class="skills__container bd-grid">
-                      <div class="skills__box">
-                          <h2 class="about__subtitle">Rare Finds</h2>
-                          <p class="about__text">Rare Finds is a luxury online book store.</p>
-                      </div>
+                <img src="assets/img/homebooks.png" alt="" class="home__img">
+            </div>
+        </section>
 
-                      <div class="dogimg">
-                          <img src="assets/img/doggy2.jpg" alt="">
-                      </div>
-                  </div>
-              </section>
+        <section class="skills section" id="skills">
+            <h2 class="section-title">About</h2>
 
+            <div class="skills__container bd-grid">
+                <div class="skills__box">
+                    <h2 class="about__subtitle">Rare Finds</h2>
+                    <p class="about__text">Rare Finds is a luxury online book store.</p>
+                </div>
 
-            
-              <section class="about section" id="about">
-                  <h2 class="section-title">Featured Books</h2>
-
-                  <div class="about__container bd-grid">
-                      <div class="about__img">
-                          <img src="assets/img/homebooks.png" alt="">
-                      </div>
-
-                      <div>
-                          <h2 class="about__subtitle">Rare Finds</h2>
-                          <p class="about__text">Find your next page-turner.</p>
+                <div class="dogimg">
+                    <img src="assets/img/doggy2.jpg" alt="">
+                </div>
+            </div>
+        </section>
 
 
-                          <style>
-                              * {box-sizing: border-box}
-                              body {font-family: Verdana, sans-serif; margin:0}
-                              .mySlides {display: none}
-                              img {vertical-align: middle;}
-                              
-                             
-                              .slideshow-container {
-                                max-width: 250px;
-                                position: relative;
-                                margin: auto;
-                              }
-                              
+      
+        <section class="about section" id="about">
+            <h2 class="section-title">Featured Books</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/homebooks.png" alt="">
+                </div>
+
+                <div>
+                    <h2 class="about__subtitle">Rare Finds</h2>
+                    <p class="about__text">Find your next page-turner.</p>
+
+
+                    <style>
+                        * {box-sizing: border-box}
+                        body {font-family: Verdana, sans-serif; margin:0}
+                        .mySlides {display: none}
+                        img {vertical-align: middle;}
                         
-                              .prev, .next {
-                                cursor: pointer;
-                                position: absolute;
-                                top: 50%;
-                                width: auto;
-                                padding: 16px;
-                                margin-top: -22px;
-                                color: white;
-                                font-weight: bold;
-                                font-size: 18px;
-                                transition: 0.6s ease;
-                                border-radius: 0 3px 3px 0;
-                                user-select: none;
-                              }
-                              
-            
-                              .next {
-                                right: 0;
-                                border-radius: 3px 0 0 3px;
-                              }
-                              
-                          
-                              .prev:hover, .next:hover {
-                                background-color: rgba(0,0,0,0.8);
-                              }
-                              
-                 
-                              .text {
-                                color: #f2f2f2;
-                                font-size: 15px;
-                                padding: 8px 12px;
-                                position: absolute;
-                                bottom: 8px;
-                                width: 100%;
-                                text-align: center;
-                              }
-                              
-                           
-                              .numbertext {
-                                color: #f2f2f2;
-                                font-size: 12px;
-                                padding: 8px 12px;
-                                position: absolute;
-                                top: 0;
-                              }
-                              
                        
-                              .dot {
-                                cursor: pointer;
-                                height: 15px;
-                                width: 15px;
-                                margin: 0 2px;
-                                background-color: #bbb;
-                                border-radius: 50%;
-                                display: inline-block;
-                                transition: background-color 0.6s ease;
-                              }
-                              
-                              .active, .dot:hover {
-                                background-color: #717171;
-                              }
-                              
-            
-                              .fade {
-                                -webkit-animation-name: fade;
-                                -webkit-animation-duration: 1.5s;
-                                animation-name: fade;
-                                animation-duration: 1.5s;
-                              }
-                              
-                              @-webkit-keyframes fade {
-                                from {opacity: .4} 
-                                to {opacity: 1}
-                              }
-                              
-                              @keyframes fade {
-                                from {opacity: .4} 
-                                to {opacity: 1}
-                              }
-                              
+                        .slideshow-container {
+                          max-width: 250px;
+                          position: relative;
+                          margin: auto;
+                        }
+                        
                   
-                              @media only screen and (max-width: 300px) {
-                                .prev, .next,.text {font-size: 11px}
-                              }
-                              </style>
-                              </head>
-                              <body>
-                              
-                              <div class="slideshow-container">
-                              
-                              <div class="mySlides fade">
-                                <a href="151days.html">
-                                <img src="assets/img/151days.jpg" style="width:100%">
-                              </div>
-                              
-                              <div class="mySlides fade">
-                                <a href="greatgatsby.html">
-                                <img src="assets/img/greatgats.jpg" style="width:100%"></a>
-                              </div>
-                              
-                              <div class="mySlides fade">
-                                <a href="lesmis.html">
-                                <img src="assets/img/lesmis.jpg" style="width:100%"></a>
-                              </div>
-                              
-                              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                              
-                              </div>
-                              <br>
-                              
-                              <div style="text-align:center">
-                                <span class="dot" onclick="currentSlide(1)"></span> 
-                                <span class="dot" onclick="currentSlide(2)"></span> 
-                                <span class="dot" onclick="currentSlide(3)"></span> 
-                              </div>
-                              
-                              <script>
-                              var slideIndex = 1;
-                              showSlides(slideIndex);
-                              
-                              function plusSlides(n) {
-                                showSlides(slideIndex += n);
-                              }
-                              
-                              function currentSlide(n) {
-                                showSlides(slideIndex = n);
-                              }
-                              
-                              function showSlides(n) {
-                                var i;
-                                var slides = document.getElementsByClassName("mySlides");
-                                var dots = document.getElementsByClassName("dot");
-                                if (n > slides.length) {slideIndex = 1}    
-                                if (n < 1) {slideIndex = slides.length}
-                                for (i = 0; i < slides.length; i++) {
-                                    slides[i].style.display = "none";  
-                                }
-                                for (i = 0; i < dots.length; i++) {
-                                    dots[i].className = dots[i].className.replace(" active", "");
-                                }
-                                slides[slideIndex-1].style.display = "block";  
-                                dots[slideIndex-1].className += " active";
-                              }
-                              </script>
-                              
-                              </body>
+                        .prev, .next {
+                          cursor: pointer;
+                          position: absolute;
+                          top: 50%;
+                          width: auto;
+                          padding: 16px;
+                          margin-top: -22px;
+                          color: white;
+                          font-weight: bold;
+                          font-size: 18px;
+                          transition: 0.6s ease;
+                          border-radius: 0 3px 3px 0;
+                          user-select: none;
+                        }
+                        
+      
+                        .next {
+                          right: 0;
+                          border-radius: 3px 0 0 3px;
+                        }
+                        
+                    
+                        .prev:hover, .next:hover {
+                          background-color: rgba(0,0,0,0.8);
+                        }
+                        
+           
+                        .text {
+                          color: #f2f2f2;
+                          font-size: 15px;
+                          padding: 8px 12px;
+                          position: absolute;
+                          bottom: 8px;
+                          width: 100%;
+                          text-align: center;
+                        }
+                        
+                     
+                        .numbertext {
+                          color: #f2f2f2;
+                          font-size: 12px;
+                          padding: 8px 12px;
+                          position: absolute;
+                          top: 0;
+                        }
+                        
+                 
+                        .dot {
+                          cursor: pointer;
+                          height: 15px;
+                          width: 15px;
+                          margin: 0 2px;
+                          background-color: #bbb;
+                          border-radius: 50%;
+                          display: inline-block;
+                          transition: background-color 0.6s ease;
+                        }
+                        
+                        .active, .dot:hover {
+                          background-color: #717171;
+                        }
+                        
+      
+                        .fade {
+                          -webkit-animation-name: fade;
+                          -webkit-animation-duration: 1.5s;
+                          animation-name: fade;
+                          animation-duration: 1.5s;
+                        }
+                        
+                        @-webkit-keyframes fade {
+                          from {opacity: .4} 
+                          to {opacity: 1}
+                        }
+                        
+                        @keyframes fade {
+                          from {opacity: .4} 
+                          to {opacity: 1}
+                        }
+                        
+            
+                        @media only screen and (max-width: 300px) {
+                          .prev, .next,.text {font-size: 11px}
+                        }
+                        </style>
+                        </head>
+                        <body>
+                        
+                        <div class="slideshow-container">
+                        
+                        <div class="mySlides fade">
+                          <a href="151days.html">
+                          <img src="assets/img/151days.jpg" style="width:100%">
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <a href="greatgatsby.html">
+                          <img src="assets/img/greatgats.jpg" style="width:100%"></a>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <a href="lesmis.html">
+                          <img src="assets/img/lesmis.jpg" style="width:100%"></a>
+                        </div>
+                        
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        
+                        </div>
+                        <br>
+                        
+                        <div style="text-align:center">
+                          <span class="dot" onclick="currentSlide(1)"></span> 
+                          <span class="dot" onclick="currentSlide(2)"></span> 
+                          <span class="dot" onclick="currentSlide(3)"></span> 
+                        </div>
+                        
+                        <script>
+                        var slideIndex = 1;
+                        showSlides(slideIndex);
+                        
+                        function plusSlides(n) {
+                          showSlides(slideIndex += n);
+                        }
+                        
+                        function currentSlide(n) {
+                          showSlides(slideIndex = n);
+                        }
+                        
+                        function showSlides(n) {
+                          var i;
+                          var slides = document.getElementsByClassName("mySlides");
+                          var dots = document.getElementsByClassName("dot");
+                          if (n > slides.length) {slideIndex = 1}    
+                          if (n < 1) {slideIndex = slides.length}
+                          for (i = 0; i < slides.length; i++) {
+                              slides[i].style.display = "none";  
+                          }
+                          for (i = 0; i < dots.length; i++) {
+                              dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex-1].style.display = "block";  
+                          dots[slideIndex-1].className += " active";
+                        }
+                        </script>
+                        
+                        </body>
 
-                      </div>
-                  </div>
-              </section>
+                </div>
+            </div>
+        </section>
 
 
-              <section class="portfolio section" id="portfolio">
-                  <h2 class="section-title">Top Sellers</h2>
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section-title">Top Sellers</h2>
 
-                  <div class="portfolio__container bd-grid">
-                      <div class="bookimg">
-                          <img src="assets/img/juliusc.jpg" alt="">
+            <div class="portfolio__container bd-grid">
+                <div class="bookimg">
+                    <img src="assets/img/juliusc.jpg" alt="">
 
-                          <div class="portfolio__link">
-                              <a href="julius.html" class="portfolio__link-name">View details</a>
-                          </div>
-                      </div>
-                      <div class="bookimg">
-                          <img src="assets/img/romeo.jpg" alt="">
+                    <div class="portfolio__link">
+                        <a href="julius.html" class="portfolio__link-name">View details</a>
+                    </div>
+                </div>
+                <div class="bookimg">
+                    <img src="assets/img/romeo.jpg" alt="">
 
-                          <div class="portfolio__link">
-                              <a href="romeoandjuliet.html" class="portfolio__link-name">View details</a>
-                          </div>
-                      </div>
-                      <div class="bookimg">
-                          <img src="assets/img/macbeth.jpg" alt="">
+                    <div class="portfolio__link">
+                        <a href="romeoandjuliet.html" class="portfolio__link-name">View details</a>
+                    </div>
+                </div>
+                <div class="bookimg">
+                    <img src="assets/img/macbeth.jpg" alt="">
 
-                          <div class="portfolio__link">
-                              <a href="macbeth.html" class="portfolio__link-name">View details</a>
-                          </div>
-                      </div>
-                      <div class="bookimg">
-                          <img src="assets/img/dickinson.jpg" alt="">
+                    <div class="portfolio__link">
+                        <a href="macbeth.html" class="portfolio__link-name">View details</a>
+                    </div>
+                </div>
+                <div class="bookimg">
+                    <img src="assets/img/dickinson.jpg" alt="">
 
-                          <div class="portfolio__link">
-                              <a href="emily.html" class="portfolio__link-name">View details</a>
-                          </div>
-                      </div>
-                      <div class="bookimg">
-                          <img src="assets/img/frozenbook1.jpg" alt="">
+                    <div class="portfolio__link">
+                        <a href="emily.html" class="portfolio__link-name">View details</a>
+                    </div>
+                </div>
+                <div class="bookimg">
+                    <img src="assets/img/frozenbook1.jpg" alt="">
 
-                          <div class="portfolio__link">
-                              <a href="frozen.html" class="portfolio__link-name">View details</a>
-                          </div>
-                      </div>
-                      <div class="bookimg">
-                          <img src="assets/img/hamlet.jpg" alt="">
+                    <div class="portfolio__link">
+                        <a href="frozen.html" class="portfolio__link-name">View details</a>
+                    </div>
+                </div>
+                <div class="bookimg">
+                    <img src="assets/img/hamlet.jpg" alt="">
 
-                          <div class="portfolio__link">
-                              <a href="Hamlet.html" class="portfolio__link-name">View details</a>
-                          </div>
-                      </div>
-                  </div>
-              </section>
+                    <div class="portfolio__link">
+                        <a href="Hamlet.html" class="portfolio__link-name">View details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
-              <section class="contact section" id="contact">
-                  <h2 class="section-title">Subscribe to our newsletter</h2>
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Subscribe to our newsletter</h2>
 
-                  <div class="contact__container bd-grid">
-                      <form action="" class="contact__form">
-                          <div class="contact__inputs">
-                              <input type="mail" placeholder="Email" class="contact__input">
-                          </div>
-                          <input type="submit" value="Submit" class="contact__button">
-                      </form>
-                  </div>
-              </section>
-          </main>
+            <div class="contact__container bd-grid">
+                <form action="" class="contact__form">
+                    <div class="contact__inputs">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                    </div>
+                    <input type="submit" value="Submit" class="contact__button">
+                </form>
+            </div>
+        </section>
+    </main>
 
-          <footer class="footer section">
-          </footer>
-          <script src="https://unpkg.com/scrollreveal"></script>
-          <script src="assets/js/main.js"></script>
-      </body>
-  </html>
+    <footer class="footer section">
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
