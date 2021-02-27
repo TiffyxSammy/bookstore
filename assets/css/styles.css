@@ -355,6 +355,7 @@ img{
     font-size: var(--normal-font-size);
     margin-bottom: var(--mb-4);
     border-radius: .5rem;
+    margin-left: 300px;
 }
 
 .contact__button{
@@ -362,7 +363,7 @@ img{
     background-color: var(--first-color);
     color: var(--white-color);
     padding: .75rem 2.5rem;
-    margin-left: auto;
+    margin-left: 400px;
     border-radius: .5rem;
     border: none;
     outline: none;
@@ -379,11 +380,7 @@ img{
     row-gap: 2rem;
 }
 
-.footer__title{
-    font-size: var(--normal-font-size);
-    color: var(--white-color);
-    margin-bottom: var(--mb-2);
-}
+
 
 .footer__link{
     padding: .25rem 0;
@@ -471,7 +468,7 @@ img{
         justify-items: center;
     }
     .contact__form{
-        width: 380px;
+        width: 400px;
     }
 
     .footer__container{
