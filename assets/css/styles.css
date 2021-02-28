@@ -86,7 +86,18 @@ img{
     margin: var(--mb-4) 0;
     text-align: center;
 }
-
+.logo{
+    position: static;
+    top: 100%;
+    left: 39%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-right: -15px;
+    height: 60px;
+    width: 140px;
+    
+    float: left;
+}
 .section-title::after{
     position: absolute;
     content: "";
@@ -141,6 +152,10 @@ img{
 }
 .nav__item{
     margin-bottom: var(--mb-4);
+}
+
+.nav__item .fas{
+    color: rgb(212, 148, 63);
 }
 .nav__link{
     position: relative;
