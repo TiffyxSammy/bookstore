@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="../work-in-progress/assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Change Password
+    Address Information
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -23,46 +23,46 @@
       <div class="logo"><a href="../homepageLoggedIn.html" class="simple-text logo-normal"><img class="logo" src="../logo.png" 
         alt="" width="100" height="80" class="center">
         </a></div>
-        <div class="sidebar-wrapper">
-          <ul class="nav">
-            <li class="nav-item ">
-              <a class="nav-link" href="user.html">
-                <i class="material-icons">person</i>
-                <p>User Profile</p>
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="changePassword.html">
-                <i class="material-icons">password</i>
-                <p>Change Password</p>
-              </a>
-            </li>
-            <li class="nav-item  ">
-              <a class="nav-link" href="paymentInformation.html">
-                <i class="material-icons">dashboard</i>
-                <p>Payment Information</p>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="orderHistory.html">
-                <i class="material-icons">content_paste</i>
-                <p>Order History</p>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="addressInfo.html">
-                <i class="material-icons">address</i>
-                <p>Address Information</p>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../userLogin.html">
-                <i class="material-icons">notifications</i>
-                <p>Log Out</p>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="user.html">
+              <i class="material-icons">person</i>
+              <p>User Profile</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="changePassword.html">
+              <i class="material-icons">password</i>
+              <p>Change Password</p>
+            </a>
+          </li>
+          <li class="nav-item  ">
+            <a class="nav-link" href="paymentInformation.html">
+              <i class="material-icons">dashboard</i>
+              <p>Payment Information</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="orderHistory.html">
+              <i class="material-icons">content_paste</i>
+              <p>Order History</p>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="addressInfo.html">
+              <i class="material-icons">address</i>
+              <p>Address Information</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="../userLogin.html">
+              <i class="material-icons">notifications</i>
+              <p>Log Out</p>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="main-panel">
       <div class="content">
@@ -71,38 +71,42 @@
             <div class="col-md-8">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Change Password</h4>
+                  <h4 class="card-title">Change Address Information</h4>
                 </div>
                 <div class="card-body">
-                  <form>
-                    <div class="row">
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Current Password</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
+                    <form>
+                      <div class="row">
+                        <div class="col-md-8">
                           <div class="form-group">
-                            <label class="bmd-label-floating">New Password</label>
+                            <label class="bmd-label-floating">Address</label>
                             <input type="text" class="form-control">
                           </div>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                           <div class="form-group">
-                            <label class="bmd-label-floating">Confirm New Password</label>
+                            <label class="bmd-label-floating">City</label>
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-1">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">State</label>
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">Postal Code</label>
                             <input type="text" class="form-control">
                           </div>
                         </div>
                       </div>
-                    <button type="submit" class="btn btn-primary pull-right">Update Password</button>
-                    <div class="clearfix"></div>
-                  </form>
-                </div>
+                      <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                      <div class="clearfix"></div>
+                    </form>
+                  </div>
               </div>
             </div>
           </div>
