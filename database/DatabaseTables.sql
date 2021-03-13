@@ -1,3 +1,7 @@
+/*
+
+-- This file is the one I Hand typed, Use "bookstore.sql" to import the database
+
 CREATE DATABASE IF NOT EXISTS `bookstore`;
 
 USE `bookstore`;
@@ -170,3 +174,6 @@ INSERT INTO `shipping_type`(`SHIPPING_ID`, `SHIPPING_NAME`, `SHIPPING_COST`, `SH
 (1, "Standard Shipping", 4.99, "3-5 Business Days"), 
 (2, "Express Shipping", 7.99, "2-3 Business Days"), 
 (3, "Expedited Shipping", 15.99, "1-2 Business Days")
+
+
+*/
