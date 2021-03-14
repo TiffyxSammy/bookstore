@@ -1,4 +1,4 @@
-/*
+/* 
 
 -- This file is the one I Hand typed, Use "bookstore.sql" to import the database
 
@@ -20,6 +20,8 @@ USE `bookstore`;
 
 CREATE TABLE IF NOT EXISTS `address` (
     `ADDRESS_ID` INT(11) NOT NULL AUTO_INCREMENT,
+    `FIRST_NAME` varchar(255) NOT NULL,
+    `LAST_NAME` varchar(255) NOT NULL,
     `STREET` VARCHAR(255) NOT NULL,
     `CITY` VARCHAR(255) NOT NULL,
     `STATE` VARCHAR(255) NOT NULL,
@@ -32,8 +34,8 @@ CREATE TABLE IF NOT EXISTS `user` (
   `USER_NAME` varchar(255) NOT NULL UNIQUE,
   `EMAIL_ADDRESS` varchar(255) NOT NULL UNIQUE,
   `PASSWORD` varchar(255) NOT NULL,
-  `FIRST_NAME` text NOT NULL,
-  `LAST_NAME` text NOT NULL,
+  `FIRST_NAME` varchar(255) NOT NULL,
+  `LAST_NAME` varchar(255) NOT NULL,
   `PHONE_NUMBER` int(10),
   `BIRTHDAY` DATE, 
   `USER_STATUS` INT(2) DEFAULT 2 NOT NULL,
@@ -48,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 CREATE TABLE IF NOT EXISTS `payment_card` (
     `PAYMENT_ID` int(11) NOT NULL AUTO_INCREMENT,
-    `CARD_NUM` int(16) NOT NULL,
+    `CARD_NUM` BIGINT(16) NOT NULL,
     `USER_ID` int(11) NOT NULL,
     `BILLING_ADDRESS` int(11) NOT NULL,
     `TYPE` VARCHAR(255) NOT NULL,

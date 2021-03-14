@@ -2,10 +2,10 @@
 -- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Mar 14, 2021 at 01:45 AM
+-- Host: 127.0.0.1
+-- Generation Time: Mar 14, 2021 at 02:44 AM
 -- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- PHP Version: 7.3.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,27 +29,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `address` (
   `ADDRESS_ID` int(11) NOT NULL,
+  `FIRST_NAME` varchar(255) NOT NULL,
+  `LAST_NAME` varchar(255) NOT NULL,
   `STREET` varchar(255) NOT NULL,
   `CITY` varchar(255) NOT NULL,
   `STATE` varchar(255) NOT NULL,
   `ZIP` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `adminAccounts`
---
-
-CREATE TABLE `adminAccounts` (
-  `ADMIN_ID` int(11) NOT NULL,
-  `USER_NAME` varchar(255) NOT NULL,
-  `PASSWORD` varchar(255) NOT NULL,
-  `FIRST_NAME` text NOT NULL,
-  `LAST_NAME` text NOT NULL,
-  `EMAIL_ADDRESS` varchar(255) NOT NULL,
-  `PHONE_NUMBER` int(10) NOT NULL,
-  `USER_TYPE` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -138,7 +123,7 @@ CREATE TABLE `order_item` (
 
 CREATE TABLE `payment_card` (
   `PAYMENT_ID` int(11) NOT NULL,
-  `CARD_NUM` int(16) NOT NULL,
+  `CARD_NUM` bigint(16) NOT NULL,
   `USER_ID` int(11) NOT NULL,
   `BILLING_ADDRESS` int(11) NOT NULL,
   `TYPE` varchar(255) NOT NULL,
@@ -192,8 +177,8 @@ CREATE TABLE `user` (
   `USER_NAME` varchar(255) NOT NULL,
   `EMAIL_ADDRESS` varchar(255) NOT NULL,
   `PASSWORD` varchar(255) NOT NULL,
-  `FIRST_NAME` text NOT NULL,
-  `LAST_NAME` text NOT NULL,
+  `FIRST_NAME` varchar(255) NOT NULL,
+  `LAST_NAME` varchar(255) NOT NULL,
   `PHONE_NUMBER` int(10) DEFAULT NULL,
   `BIRTHDAY` date DEFAULT NULL,
   `USER_STATUS` int(2) NOT NULL DEFAULT 2,
@@ -249,14 +234,6 @@ INSERT INTO `user_type` (`TYPE_ID`, `TYPE_NAME`) VALUES
 --
 ALTER TABLE `address`
   ADD PRIMARY KEY (`ADDRESS_ID`);
-
---
--- Indexes for table `adminAccounts`
---
-ALTER TABLE `adminAccounts`
-  ADD PRIMARY KEY (`ADMIN_ID`),
-  ADD UNIQUE KEY `USER_NAME` (`USER_NAME`,`EMAIL_ADDRESS`),
-  ADD UNIQUE KEY `USER_TYPE` (`USER_TYPE`);
 
 --
 -- Indexes for table `book`
